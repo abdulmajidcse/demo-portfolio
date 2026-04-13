@@ -1,17 +1,13 @@
 # Portfolio - Abdul Majid
 
-A personal portfolio website built with Next.js, TypeScript, and Tailwind CSS.
-
-## About
-
-A clean, minimal portfolio showcasing my background as a full-stack engineer. The site features light and dark mode support via `prefers-color-scheme`.
+A testing-purpose portfolio website used to implement Docker for development and deployment on a VPS with Caddy, along with GitHub Actions for CI/CD.
 
 ## Pages
 
-- **Home** — Hero section with introduction and quick navigation cards to other pages
-- **About** — Bio, skills (TypeScript, React, Next.js, Node.js, Tailwind CSS, PostgreSQL, Git, Docker), and work experience timeline
-- **Projects** — Showcase of projects including a task management app, CLI tool, data visualization dashboard, and e-commerce platform
-- **Contact** — Contact form and social links (GitHub, LinkedIn, Twitter)
+- **Home** — Hero section with introduction and quick navigation cards
+- **About** — Bio, skills, and work experience timeline
+- **Projects** — Showcase of projects
+- **Contact** — Contact form and social links
 
 ## Tech Stack
 
@@ -19,8 +15,13 @@ A clean, minimal portfolio showcasing my background as a full-stack engineer. Th
 - [React](https://react.dev) 19
 - [TypeScript](https://www.typescriptlang.org)
 - [Tailwind CSS](https://tailwindcss.com) v4
+- [Docker](https://www.docker.com) — containerized production builds
+- [Caddy](https://caddyserver.com) — reverse proxy on VPS
+- [GitHub Actions](https://github.com/features/actions) — CI/CD pipeline
 
 ## Getting Started
+
+### Local Development
 
 ```bash
 npm install
@@ -28,3 +29,11 @@ npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) to view the site.
+
+### Production (Docker)
+
+```bash
+docker compose -f compose.prod.yml up -d --build
+```
+
+The app runs on port `3001` by default. Set the `APP_PORT` environment variable to change it.
