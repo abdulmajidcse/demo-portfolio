@@ -30,6 +30,14 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) to view the site.
 
+### Local Development (Docker)
+
+```bash
+docker compose -f compose.dev.yml up
+```
+
+This mounts the project directory into the container with hot reload. The app runs on port `3001` by default. Set the `APP_PORT` environment variable to change it.
+
 ### Production (Docker)
 
 ```bash
