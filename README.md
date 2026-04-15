@@ -45,3 +45,18 @@ docker compose -f compose.prod.yml up -d --build
 ```
 
 The app runs on port `3001` by default. Set the `APP_PORT` environment variable to change it.
+
+## CI/CD
+
+The project uses GitHub Actions to automatically deploy on every push to `main`. The workflow SSHs into the VPS, pulls the latest code, and rebuilds the Docker container.
+
+### Required GitHub Secrets
+
+Configure these in your repository settings under **Settings > Secrets and variables > Actions**:
+
+| Secret         | Description                              |
+| -------------- | ---------------------------------------- |
+| `VPS_HOST`     | VPS IP address or hostname               |
+| `VPS_USERNAME` | SSH username                             |
+| `VPS_SSH_KEY`  | Private SSH key for authentication       |
+| `VPS_APP_PATH` | Project directory path on the VPS        |
