@@ -63,7 +63,7 @@ export default function RootLayout({
 
         <footer className="border-t border-black/[.08] dark:border-white/[.145]">
           <div className="mx-auto flex h-16 max-w-5xl items-center justify-center px-6 text-sm text-foreground/40">
-            &copy; {new Date().getFullYear()} Portfolio. All rights reserved.
+            &copy; {new Date().getFullYear()} Abdul Majid. All rights reserved.
           </div>
         </footer>
       </body>

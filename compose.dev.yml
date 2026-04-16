@@ -7,4 +7,4 @@ services:
       - .:/app
     ports:
       - "${APP_PORT:-3001}:${APP_PORT:-3001}"
-    command: npm run dev
+    command: sh -c "npm install && PORT=${APP_PORT:-3001} npm run dev"
